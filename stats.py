@@ -16,3 +16,15 @@ def count_each_character(book_contents):
             character_dictionary[each_character] = 1
     
     return character_dictionary
+
+def sort_on(d):
+    return d["num"]
+
+def chars_dict_to_sorted_list(chars_dictionary):
+    sorted_list = []
+    for ch in chars_dictionary:
+        sorted_list.append({"char": ch, "num": chars_dictionary[ch]})
+    
+    
+    sorted_list.sort(reverse=True, key=sort_on)
+    return sorted_list
