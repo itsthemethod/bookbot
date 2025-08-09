@@ -7,7 +7,16 @@ from stats import (
 def main():
         #print(get_book_text("bookbot/books/frankenstein.txt"))
     #book_contents = "Thats so fucking stupid thats been my entire fucking problem why was that not made clear you stipid piece of shit"
-    book_path = "bookbot/books/frankenstein.txt"
+    #book_path = "books/frankenstein.txt"
+
+    import sys
+    if len(sys.argv) != 2:
+        print("Usage python3 main.py <path_to_book>")
+        sys.exit(1)
+    book_path = sys.argv[1]
+
+
+
     book_contents = get_book_text(book_path)
     
    
